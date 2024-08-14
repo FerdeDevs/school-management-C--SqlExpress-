@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F127C3D-8DD5-4D67-81B7-95C02954B51E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Projets1erSessionCSharp</RootNamespace>
+    <AssemblyName>Projets1erSessionCSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LogoApp.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\Downloads\Compressed\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=5.2.2.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Siticone.UI">
+      <HintPath>..\..\..\Downloads\Siticone.UI_x86\Siticone.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM.Designer.cs">
+      <DependentUpon>FORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Modifier\EtudiantEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Modifier\EtudiantEdit.Designer.cs">
+      <DependentUpon>EtudiantEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Ajouter\EtudiantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Ajouter\EtudiantForm.Designer.cs">
+      <DependentUpon>EtudiantForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user\SinglePayrollForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user\SinglePayrollForm.Designer.cs">
+      <DependentUpon>SinglePayrollForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user\PaiementEtudiant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user\PaiementEtudiant.Designer.cs">
+      <DependentUpon>PaiementEtudiant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Dashboard\PaiementEtudiantDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Dashboard\PaiementEtudiantDashboardForm.Designer.cs">
+      <DependentUpon>PaiementEtudiantDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user\PayrollForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user\PayrollForm.Designer.cs">
+      <DependentUpon>PayrollForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user\EtudiantTrashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user\EtudiantTrashForm.Designer.cs">
+      <DependentUpon>EtudiantTrashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Modifier\EnseignantEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Modifier\EnseignantEdit.Designer.cs">
+      <DependentUpon>EnseignantEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Dashboard\NoteDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Dashboard\NoteDashboardForm.Designer.cs">
+      <DependentUpon>NoteDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Modifier\SecretaireEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Modifier\SecretaireEdit.Designer.cs">
+      <DependentUpon>SecretaireEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user\ApproveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user\ApproveForm.Designer.cs">
+      <DependentUpon>ApproveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Dashboard\EconomeDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Dashboard\EconomeDashboardForm.Designer.cs">
+      <DependentUpon>EconomeDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Dashboard\EnseignantDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Dashboard\EnseignantDashboardForm.Designer.cs">
+      <DependentUpon>EnseignantDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Dashboard\EtudiantDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Dashboard\EtudiantDashboardForm.Designer.cs">
+      <DependentUpon>EtudiantDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Dashboard\AdminDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Dashboard\AdminDashboardForm.Designer.cs">
+      <DependentUpon>AdminDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Dashboard\SecretaireDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Dashboard\SecretaireDashboardForm.Designer.cs">
+      <DependentUpon>SecretaireDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Modifier\AdminEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Modifier\AdminEdit.Designer.cs">
+      <DependentUpon>AdminEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Ferde.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assets\Ferde.Designer.cs">
+      <DependentUpon>Ferde.cs</DependentUpon>
+    </Compile>
+    <Compile Include="splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splash.Designer.cs">
+      <DependentUpon>splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToastForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToastForm.Designer.cs">
+      <DependentUpon>ToastForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Modifier\EconomeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Modifier\EconomeEdit.Designer.cs">
+      <DependentUpon>EconomeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user\UserProfilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user\UserProfilForm.Designer.cs">
+      <DependentUpon>UserProfilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user\ConnexionSuperUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user\ConnexionSuperUserForm.Designer.cs">
+      <DependentUpon>ConnexionSuperUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Ajouter\EconomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Ajouter\EconomeForm.Designer.cs">
+      <DependentUpon>EconomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Ajouter\SecretaireForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Ajouter\SecretaireForm.Designer.cs">
+      <DependentUpon>SecretaireForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Ajouter\EnseignantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Ajouter\EnseignantForm.Designer.cs">
+      <DependentUpon>EnseignantForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Ajouter\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Ajouter\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="register.Designer.cs">
+      <DependentUpon>register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FORM.resx">
+      <DependentUpon>FORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Modifier\EtudiantEdit.resx">
+      <DependentUpon>EtudiantEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Ajouter\EtudiantForm.resx">
+      <DependentUpon>EtudiantForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user\SinglePayrollForm.resx">
+      <DependentUpon>SinglePayrollForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user\PaiementEtudiant.resx">
+      <DependentUpon>PaiementEtudiant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Dashboard\PaiementEtudiantDashboardForm.resx">
+      <DependentUpon>PaiementEtudiantDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user\PayrollForm.resx">
+      <DependentUpon>PayrollForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user\EtudiantTrashForm.resx">
+      <DependentUpon>EtudiantTrashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Dashboard\EconomeDashboardForm.resx">
+      <DependentUpon>EconomeDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Dashboard\EtudiantDashboardForm.resx">
+      <DependentUpon>EtudiantDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Dashboard\SecretaireDashboardForm.resx">
+      <DependentUpon>SecretaireDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Modifier\EconomeEdit.resx">
+      <DependentUpon>EconomeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Modifier\EnseignantEdit.resx">
+      <DependentUpon>EnseignantEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Dashboard\EnseignantDashboardForm.resx">
+      <DependentUpon>EnseignantDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Dashboard\NoteDashboardForm.resx">
+      <DependentUpon>NoteDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Modifier\SecretaireEdit.resx">
+      <DependentUpon>SecretaireEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user\ApproveForm.resx">
+      <DependentUpon>ApproveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Dashboard\AdminDashboardForm.resx">
+      <DependentUpon>AdminDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Modifier\AdminEdit.resx">
+      <DependentUpon>AdminEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Ferde.resx">
+      <DependentUpon>Ferde.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splash.resx">
+      <DependentUpon>splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToastForm.resx">
+      <DependentUpon>ToastForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user\UserProfilForm.resx">
+      <DependentUpon>UserProfilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user\ConnexionSuperUserForm.resx">
+      <DependentUpon>ConnexionSuperUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Ajouter\EconomeForm.resx">
+      <DependentUpon>EconomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Ajouter\SecretaireForm.resx">
+      <DependentUpon>SecretaireForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Ajouter\EnseignantForm.resx">
+      <DependentUpon>EnseignantForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Ajouter\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="register.resx">
+      <DependentUpon>register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="bin\Debug\Projets1erSessionCSharp.exe.config" />
+    <None Include="bin\Debug\Projets1erSessionCSharp.vshost.exe.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\img\High School-rafiki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\icon\checkbox-circle-fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\icon\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\icon\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\icon\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\icon\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LogoApp.ico" />
+    <None Include="Assets\icon\arrow-right-s-line.png" />
+    <None Include="Assets\icon\arrow-down-s-line.png" />
+    <None Include="Assets\icon\arrowDown.png" />
+    <None Include="Assets\icon\arrowRight.png" />
+    <None Include="Assets\icon\add.png" />
+    <None Include="Assets\icon\bubble.png" />
+    <None Include="Assets\icon\checkboxCircle.png" />
+    <None Include="Assets\icon\delete.png" />
+    <None Include="Assets\icon\edit.png" />
+    <None Include="Assets\icon\search.png" />
+    <Content Include="bin\Debug\Guna.UI.dll" />
+    <Content Include="bin\Debug\Projets1erSessionCSharp.exe" />
+    <Content Include="bin\Debug\Projets1erSessionCSharp.pdb" />
+    <Content Include="bin\Debug\Projets1erSessionCSharp.vshost.exe" />
+    <Content Include="bin\Debug\Siticone.UI.dll" />
+    <Content Include="bin\Debug\upload\IMG_1131.jpg" />
+    <Content Include="bin\Debug\upload\IMG_1259.jpg" />
+    <Content Include="bin\Debug\upload\IMG_1276.jpg" />
+    <Content Include="bin\Debug\upload\IMG_1278.jpg" />
+    <Content Include="bin\Debug\upload\IMG_5314.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="Form\Rechercher\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
